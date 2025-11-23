@@ -49,7 +49,7 @@ O modelo de TinyML demonstrou alta eficácia na distinção entre estados normai
 
 ### Matriz de Confusão
 <div align="center">
-  <img src="docs/Matriz_Confusao.PNG" width="600" alt="docs/Matriz de Confusão"/>
+  <img src="docs/Matriz_Confusao.PNG" width="600" alt="Matriz de Confusão"/>
   <p><i>Demonstração da precisão na classificação dos estados. Note a clara separação entre "Motor Ligado" e "Anomalia".</i></p>
 </div>
 
@@ -100,46 +100,49 @@ A conexão física é simplificada devido aos sensores integrados do Nano 33 BLE
 
 ---
 
-## 🚀 Como Reproduzir
+## 🚀 Guia de Instalação e Uso (Passo a Passo)
 
-### 1. Instalação
-*   Instale a [Arduino IDE](https://www.arduino.cc/en/software).
-*   Adicione o suporte para placas **Arduino Mbed OS Nano Boards**.
-*   Clone este repositório:
-    ```
-    git clone https://github.com/repositorio-code/-2025.2-_-DEC0021-_-Detec-o-de-Anomalias-em-H-lices-de-VANTs-com-Edge-AI-/
-    ```
+Para rodar este projeto no seu Arduino Nano 33 BLE Sense, siga o procedimento abaixo. Todo o código necessário está contido na biblioteca exportada pelo Edge Impulse.
 
-### 2. Importando a Biblioteca
-O modelo de IA treinado foi exportado como uma biblioteca Arduino.
-1. Baixe o arquivo `.zip` da biblioteca (disponível na pasta `/library` deste repositório).
-2. No Arduino IDE, vá em `Sketch > Include Library > Add .ZIP Library...` e selecione o arquivo.
+### 1. Preparar a Arduino IDE
+1.  Baixe e instale a [Arduino IDE](https://www.arduino.cc/en/software).
+2.  Vá em **Tools > Board > Boards Manager...**
+3.  Pesquise por `Nano 33 BLE` e instale o pacote **"Arduino Mbed OS Nano Boards"**.
+    *   *Nota: Isso pode levar alguns minutos.*
 
-### 3. Carregando o Código
-O código principal (`main.ino`) está localizado na pasta `/src`.
-*   Abra o arquivo no Arduino IDE.
-*   Compile e carregue para a placa.
+### 2. Importar a Biblioteca do Projeto
+O arquivo `.zip` que está na pasta `Software/edge-impulse-build` deste repositório contém todo o modelo e lógica.
+1.  Baixe o arquivo `.zip` da pasta `Software` para o seu computador.
+2.  Na Arduino IDE, vá no menu: **Sketch > Include Library > Add .ZIP Library...**
+3.  Selecione o arquivo que você acabou de baixar.
+    *   *A IDE irá mostrar uma mensagem "Library added to your libraries" no rodapé.*
+
+### 3. Carregar o Código na Placa
+Não é necessário escrever código do zero. A biblioteca já inclui exemplos prontos configurados para o seu sensor.
+1.  Vá em **File > Examples**.
+2.  Role até o final da lista, onde ficam as "Examples from Custom Libraries".
+3.  Procure pela pasta com o nome da sua biblioteca (ex: `tcc-drone-edge-ai` ou similar).
+4.  Selecione: **nano_ble33_sense > nano_ble33_sense_accelerometer**.
+    *   *Este exemplo já vem configurado para ler o IMU LSM9DS1 e rodar a inferência.*
+
+### 4. Monitorar os Resultados
+1.  Conecte o Arduino Nano 33 BLE ao PC via USB.
+2.  Selecione a porta correta em **Tools > Port**.
+3.  Clique no botão **Upload** (Seta para a direita) e aguarde a compilação.
+4.  Após carregar, abra o **Serial Monitor** (Lupa no canto superior direito).
+5.  Ajuste a velocidade (baud rate) para **115200**.
+    *   *Você verá as probabilidades de cada classe aparecendo em tempo real.*
 
 ---
 
 ## 💻 Funcionamento do Firmware
 
-O código realiza o seguinte fluxo em loop:
+O código realiza o seguinte fluxo em loop contínuo:
 
-1. **Leitura:** Coleta dados de aceleração (eixos X, Y, Z).
-2. **DSP:** Preenche o buffer de processamento digital de sinais.
-3. **Inferência:** Executa a Rede Neural (TFLite Micro).
+1. **Leitura:** Coleta dados brutos de aceleração (eixos X, Y, Z) do sensor interno.
+2. **DSP Integrado:** A biblioteca processa os dados brutos (Filtro + FFT) automaticamente.
+3. **Inferência:** Executa a Rede Neural (TFLite Micro) na borda.
 4. **Saída:** Imprime no Serial Monitor a classe detectada e sua probabilidade.
-
-## 📚 Referências e Soluções
-
-Durante o desenvolvimento, alguns desafios foram superados:
-
-*   **Data Collection:** Utilizamos o *Data Forwarder* do Edge Impulse CLI para enviar dados do Arduino via Serial.
-*   **Ruído:** O uso de cabos blindados e fixação rígida do Arduino com abraçadeiras eliminou leituras falsas causadas por fios soltos.
-*   **Amostragem:** Taxa de 100Hz definida para respeitar o Teorema de Nyquist para a rotação máxima do motor.
-
----
 
 ## 📄 Licença
 
