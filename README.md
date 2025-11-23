@@ -14,19 +14,19 @@ Este repositório contém o código-fonte, esquemas e documentação do sistema 
 <table>
   <tr>
     <td align="center">
-      <img src="docs/Foto_Drone.png" width="400" alt="Configuração da Hélice"/>
+      <img src="docs/Foto_Drone.png" width="400" alt="Montagem Final"/>
       <br />
       <b>Sistema completo</b>
     </td>
     <td align="center">
-      <img src="docs/Foto_Montagem.png" width="400" alt="Detalhe do Sensor"/>
+      <img src="docs/Foto_Montagem.png" width="400" alt="Setup Sensor e Helice"/>
       <br />
       <b>Montagem do Sensor Arduino</b>
     </td>
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <img src="docs/Foto_Setup.png" width="600" alt="Setup Completo"/>
+      <img src="docs/Foto_Setup.png" width="600" alt="Montagem para coleta"/>
       <br />
       <b>Montagem Para Coleta</b>
     </td>
