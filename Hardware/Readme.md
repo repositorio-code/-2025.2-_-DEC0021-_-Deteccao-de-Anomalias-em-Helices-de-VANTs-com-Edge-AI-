@@ -8,15 +8,15 @@ Este diretório contém detalhes técnicos e visuais sobre os componentes físic
   <table>
     <tr>
       <td align="center">
-        <img src="Hardware/Arduino_Nano33.jpg" width="250" alt="Arduino Nano 33 BLE Sense"/>
+        <img src="Arduino_Nano33.jpg" width="250" alt="Arduino Nano 33 BLE Sense"/>
         <br /><b>Microcontrolador</b>
       </td>
       <td align="center">
-        <img src="Hardware/Imagem_Motor_Drone_Brushless (1).jfif" width="250" alt="Motor Brushless D2836"/>
+        <img src="Imagem_Motor_Drone_Brushless (1).jfif" width="250" alt="Motor Brushless D2836"/>
         <br /><b>Motor Brushless D2836</b>
       </td>
       <td align="center">
-        <img src="Hardware/Diagrama_Circuito.jpg" width="250" alt="Esquemático Simplificado"/>
+        <img src="Diagrama_Circuito.jpg" width="250" alt="Esquemático Simplificado"/>
         <br /><b>Diagrama de Conexão</b>
       </td>
     </tr>
@@ -55,7 +55,4 @@ Motor responsável pela propulsão do sistema de teste.
 Para os testes de indução de falhas, foram utilizados dois conjuntos:
 *   **Tipo:** 1045 (10 polegadas x 4.5 de passo), Plástico ABS.
 *   **Modificação de Falha:** Aplicação de fita adesiva em uma das pás para alterar o centro de gravidade e induzir vibração por desbalanceamento dinâmico, sem destruição da peça.
-
-## 5. Diagrama de Montagem (Conceitual)
-O sistema é montado em uma bancada estática para garantir segurança e repetibilidade.
 
