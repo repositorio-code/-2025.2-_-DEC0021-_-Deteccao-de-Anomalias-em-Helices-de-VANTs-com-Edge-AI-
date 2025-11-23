@@ -16,7 +16,7 @@ Este repositório contém o código-fonte, esquemas e documentação do sistema 
     <td align="center">
       <img src="docs/Foto_Drone.png" width="400" alt="Configuração da Hélice"/>
       <br />
-      <b>Configuração da Hélice e Motor</b>
+      <b>Sistema completo</b>
     </td>
     <td align="center">
       <img src="docs/Foto_Montagem.png" width="400" alt="Detalhe do Sensor"/>
@@ -28,7 +28,7 @@ Este repositório contém o código-fonte, esquemas e documentação do sistema 
     <td colspan="2" align="center">
       <img src="docs/Foto_Setup.png" width="600" alt="Setup Completo"/>
       <br />
-      <b>Visão Geral da Bancada de Testes</b>
+      <b>Montagem Para Coleta</b>
     </td>
   </tr>
 </table>
