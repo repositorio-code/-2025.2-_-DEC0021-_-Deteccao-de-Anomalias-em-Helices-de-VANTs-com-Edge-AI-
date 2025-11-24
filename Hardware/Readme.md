@@ -17,7 +17,7 @@ Este diretório contém detalhes técnicos e visuais sobre os componentes físic
         <br /><b>Motor Brushless D2836</b>
       </td>
       <td align="center">
-        <img src="DiagramaCircuito.png" width="250" alt="Esquemático Simplificado"/>
+        <img src="DiagramaCircuito.png" width="400" alt="Esquemático Simplificado"/>
         <br /><b>Diagrama de Conexão</b>
       </td>
     </tr>
