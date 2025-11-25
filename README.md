@@ -24,9 +24,9 @@ Este repositório contém o código-fonte, esquemas e documentação do sistema 
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <img src="docs/Foto_Setup.png" width="600" alt="Setup Completo"/>
+      <img src="docs/Foto_Setup.png" width="600" alt="Posicionamento Do Sensor"/>
       <br />
-      <b>Visão Geral da Bancada de Testes</b>
+      <b>Posicionamento Do Sensor</b>
     </td>
   </tr>
 </table>
